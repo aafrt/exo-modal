@@ -1,0 +1,172 @@
+
+		body
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height:100vh;
+            background-color: pink;
+		}
+
+		button 
+		{
+			margin-left:4px;
+		}
+	
+
+
+
+
+/*remove default padding and margins*/
+*{
+	padding:0px;
+	margin:0px;
+	box-sizing: border-box;	
+}
+/*modal*/
+.modal-bg
+{
+	position: fixed;
+	top:0;
+	bottom: 0;
+	width:100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 20;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s,opacity 0.5s;
+}
+.modal
+{
+	display:none;
+}
+
+.modal-title
+{
+	display:none;
+}
+.modal-active
+{
+	visibility: visible;
+	opacity: 1;
+}
+
+.main-modal
+{
+	background-color: #fff;
+	width:70%;
+	min-height:30%;;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.main-modal h1
+{
+	font-size:22px;
+}
+
+.main-modal .title-div
+{
+
+	position: absolute;
+	top:20px;
+	left:10px;
+
+}
+
+.main-modal .close-btn
+{
+	cursor: pointer;
+	position: absolute;
+	top:0px;
+	right:10px;
+	transform:rotate(46deg);
+	font-size:42px;
+
+}
+
+.main-modal .close-btn:hover
+{
+	color:red;
+}
+
+.modal-content
+{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+}
+
+.modal-button
+{
+	
+	outline:none;
+	border:none;
+	color:#fff;
+	padding:8px;
+	border-radius:3px;
+	min-width:150px;
+	margin-top:4px;
+	cursor:pointer;
+    border: white 10px solid;
+    box-shadow: black 10px 10px 30px;
+}
+
+.modal-input
+{
+	padding:5px;
+	border:none;
+	border-bottom:1px solid #a09494;
+	width:60%;
+	margin-bottom:5px;
+	outline:none;
+	height:40px;
+}
+
+.modal-content
+{
+	padding:15px;
+}
+
+.modal-content span.grey
+{
+	margin-top:4px
+}
+
+.modal-content button.delete-button
+{
+	background-color:red;
+}
+
+@media screen and (min-width: 800px) {
+	/*modal*/
+	.main-modal
+	{
+		background-color: #fff;
+		width:30%;
+		height:30%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+	}
+
+	.modal-content
+	{
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+		width:100%;
+	}
+}
